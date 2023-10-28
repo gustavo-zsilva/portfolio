@@ -25,6 +25,10 @@ h1 {
     font-weight: bold;
 }
 
+li {
+    list-style-type: none;
+}
+
 .container {
     margin: 2rem;
 
@@ -92,7 +96,7 @@ h1 {
     gap: 1.2rem;
 }
 
-.container nav a {
+.container nav .links li a {
     text-decoration: none;
 
     display: flex;
@@ -102,12 +106,36 @@ h1 {
     font-size: 13px;
 }
 
-.container nav a img {
+.container nav .links li a img {
     filter: invert(56%) sepia(8%) saturate(987%) hue-rotate(209deg) brightness(88%) contrast(91%);
 }
 
 /* techs */
 
-.container nav .techs {
-    
+.container nav .techs h1 {
+    margin-bottom: 1.6rem;
 }
+
+.container nav .techs ul {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 1rem;
+}
+
+.container nav .techs ul li {
+    list-style-type: none;
+
+    background: var(--bg-techs);
+    border-radius: 9999px;
+    padding: .5rem .6rem;
+
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 12px;
+    font-weight: 500;
+    
+    color: #000;
+}
+
+/* experience */
+
