@@ -21,7 +21,7 @@ body {
     background: var(--body-bg-color);
 }
 
-h1 {
+h1, h2, h3 {
     font-weight: bold;
 }
 
@@ -137,5 +137,21 @@ li {
     color: #000;
 }
 
-/* experience */
+/* formation (experiences & education cards) */
 
+.container nav .formation h1 {
+    margin-bottom: 1.6rem;
+}
+
+.container nav .formation ul {
+    display: flex;
+    flex-direction: column;
+    gap: 1.4rem;
+
+    padding-left: 2rem;
+}
+
+.container nav .formation ul li {
+    list-style-type: disc;
+    font-size: 13px;
+}
