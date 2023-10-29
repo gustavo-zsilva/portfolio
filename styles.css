@@ -25,6 +25,10 @@ h1, h2, h3 {
     font-weight: bold;
 }
 
+a {
+    text-decoration: none;
+}
+
 li {
     list-style-type: none;
 }
@@ -33,6 +37,7 @@ li {
     margin: 2rem;
 
     display: flex;
+    gap: 4rem;
 }
 
 /* card */
@@ -51,6 +56,8 @@ li {
     display: flex;
     flex-direction: column;
     gap: 1.8rem;
+
+    max-width: 350px;
 }
 
 .container nav .profile {
@@ -63,6 +70,8 @@ li {
 
 .container nav .profile .gradient {
     display: flex;
+    justify-content: center;
+    align-items: center;
     
     background: linear-gradient(to left, orange, red);
 
@@ -97,13 +106,13 @@ li {
 }
 
 .container nav .links li a {
-    text-decoration: none;
-
     display: flex;
     align-items: center;
     gap: 1rem;
 
     font-size: 13px;
+
+    line-height: 1.2rem;
 }
 
 .container nav .links li a img {
@@ -154,4 +163,37 @@ li {
 .container nav .formation ul li {
     list-style-type: disc;
     font-size: 13px;
+}
+
+/* main */
+
+.container main {
+    display: flex;
+    flex-direction: column;
+
+    width: 100%;
+}
+
+.container main .projects {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.container main .projects h1 {
+    font-size: 21px;
+}
+
+/* latest projects */
+
+.container main .latest-projects {
+    
+}
+
+.container main .latest-projects .projects-overview {
+    /* display: flex; */
+}
+
+.container main .latest-projects .projects-overview header {
+    
 }
