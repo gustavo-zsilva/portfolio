@@ -109,17 +109,18 @@ li {
     gap: 1.2rem;
 }
 
-.container nav .links li a {
+.container nav .links li {
     display: flex;
     align-items: center;
     gap: 1rem;
+}
 
+.container nav .links li a {
     font-size: 13px;
-
     line-height: 1.2rem;
 }
 
-.container nav .links li a img {
+.container nav .links li img {
     filter: invert(56%) sepia(8%) saturate(987%) hue-rotate(209deg) brightness(88%) contrast(91%);
 }
 
@@ -146,6 +147,8 @@ li {
     text-transform: uppercase;
     font-size: 12px;
     font-weight: 500;
+
+    margin: auto 0;
     
     color: #000;
 }
