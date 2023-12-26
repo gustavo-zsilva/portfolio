@@ -9,6 +9,8 @@
     --text-color: #837E9F;
     --bg-cards: #302F3D;
     --bg-techs: #CB92B1;
+    --tech-border-color: #837E9F;
+    --js-color: #E7DE79;
 }
 
 body * {
@@ -188,7 +190,9 @@ li {
 /* latest projects */
 
 .container main .latest-projects {
-    
+    display: flex;
+    gap: 2rem;
+    line-height: 1.5rem;
 }
 
 .container main .latest-projects .project-overview {
@@ -211,10 +215,35 @@ li {
     filter: invert(56%) sepia(8%) saturate(987%) hue-rotate(209deg) brightness(88%) contrast(91%);
 }
 
-/* .container main .latest-projects .project-overview footer p {
+.container main .latest-projects .project-overview footer {
     display: flex;
+    justify-content: space-between;
 }
 
-.container main .latest-projects .project-overview footer p {
+.container main .latest-projects .project-overview footer p.stats {
+    display: flex;
+    gap: 1.2rem;
+}
+
+.container main .latest-projects .project-overview footer p.stats span {
+    display: flex;
     align-items: center;
-} */
+    gap: .8rem;
+}
+
+.container main .latest-projects .project-overview footer p.tech {
+    display: flex;
+    align-items: center;
+
+    gap: .6rem;
+}
+
+.container main .latest-projects .project-overview footer p.tech span.circle {
+    width: 15px;
+    height: 15px;
+    background: var(--js-color);
+
+    border-radius: 50%;
+    border: 2px solid var(--tech-border-color);
+}
+
