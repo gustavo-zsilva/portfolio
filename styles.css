@@ -40,6 +40,8 @@ li {
 
     display: flex;
     gap: 4rem;
+
+    position: relative;
 }
 
 /* card */
@@ -281,4 +283,11 @@ li {
 .container main .posts .post .content footer .tags {
     display: flex;
     gap: 1.8rem;
+}
+
+/* footer */
+
+body > footer {
+    text-align: center;
+    margin: 2rem;
 }
