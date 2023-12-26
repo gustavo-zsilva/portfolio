@@ -1,6 +1,9 @@
 const linksUl = document.querySelector('.links')
 
-document.addEventListener('DOMContentLoaded', getUserInfo)
+document.addEventListener('DOMContentLoaded', () => {
+    getUserInfo()
+    getRecentRepos()
+})
 
 async function getUserInfo() {
     try {
@@ -26,4 +29,34 @@ function showUserInfo({ company, html_url, twitter_username, location }) {
 
     githubTag.setAttribute('href', html_url)
     twitterTag.setAttribute('href', `https://twitter.com/${twitter_username}`)
+}
+
+// Get 2 most recent repos
+
+async function getRecentRepos() {
+    try {
+        const response = await axios.get('https://api.github.com/users/gustavo-zsilva/repos?per_page=100')
+        const repos = response.data
+
+        const stargazersArr = repos.map(({ stargazers_count }, index) => stargazers_count)
+
+        let largestNumber = { stargazers_count: 0, index: 0 }
+
+        stargazersArr.forEach((stargazers_count, index) => {
+            if (stargazers_count > largestNumber.stargazers_count) {
+                largestNumber.stargazers_count = stargazers_count
+
+                stargazersArr.splice(index, 1)
+                return
+            }
+
+        })
+
+        console.log(largestNumber);
+
+        // const filteredRepos = repos.filter((repo) => )
+        // console.log(filteredRepos);
+    } catch (err) {
+        console.error(err)
+    }
 }
