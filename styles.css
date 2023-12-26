@@ -183,7 +183,8 @@ li {
     align-items: center;
 }
 
-.container main .projects h1 {
+.container main .projects h1,
+.container main .recent-posts h1 {
     font-size: 21px;
 }
 
@@ -247,3 +248,37 @@ li {
     border: 2px solid var(--tech-border-color);
 }
 
+/* recent posts */
+
+.container main .posts .post {
+    display: flex;
+    gap: 2rem;
+}
+
+.container main .posts .post img {
+    width: 128px;
+    height: 128px;
+
+    border-radius: 50%;
+}
+
+.container main .posts .post .content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.container main .posts .post .content header h2 {
+    font-size: 19px;
+    margin-bottom: .6rem;
+}
+
+.container main .posts .post .content footer p {
+    font-size: 17px;
+    margin-bottom: .6rem;
+}
+
+.container main .posts .post .content footer .tags {
+    display: flex;
+    gap: 1.8rem;
+}
