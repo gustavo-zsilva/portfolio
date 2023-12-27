@@ -11,6 +11,7 @@
     --bg-techs: #CB92B1;
     --tech-border-color: #837E9F;
     --js-color: #E7DE79;
+    --ts-color: #3178C6;
 }
 
 body * {
@@ -33,6 +34,10 @@ a {
 
 li {
     list-style-type: none;
+}
+
+.typescript {
+    background-color: var(--ts-color) !important;
 }
 
 .container {
@@ -205,6 +210,8 @@ li {
     display: flex;
     flex-direction: column;
     gap: 1.6rem;
+
+    flex: 1;
 }
 
 .container main .latest-projects .project-overview header {
