@@ -1,4 +1,5 @@
 const linksUl = document.querySelector('.links')
+const navLinks = linksUl.querySelectorAll('a')
 
 import api from '../axios.js'
 
@@ -26,5 +27,9 @@ function showUserInfo({ company, html_url, twitter_username, location }) {
 
     githubTag.setAttribute('href', html_url)
     twitterTag.setAttribute('href', `https://twitter.com/${twitter_username}`)
+
+    navLinks.forEach(link => {
+        link.classList.remove('skeleton-text')
+    })
 }
 

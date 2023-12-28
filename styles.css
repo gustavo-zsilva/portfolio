@@ -40,6 +40,22 @@ li {
     list-style-type: none;
 }
 
+.skeleton-img {
+    width: 8rem;
+    height: 8rem;
+
+    animation: skeletonLoading 1s linear infinite alternate;
+}
+
+.skeleton-text {
+    width: 100%;
+
+    animation: skeletonLoading 1s linear infinite alternate;
+    border-radius: .2rem;
+
+    color: transparent;
+}
+
 .hidden {
     display: none !important;
 }
@@ -103,6 +119,8 @@ li {
     width: 8rem;
     border-radius: inherit;
     border: .4rem solid var(--body-bg-color);
+
+    color: transparent;
 }
 
 .container nav .profile h1 {
@@ -343,5 +361,14 @@ body > footer {
     to {
         opacity: 1;
         transform: translateX(0);
+    }
+}
+
+@keyframes skeletonLoading {
+    from {
+        background-color: var(--body-bg-color);
+    }
+    to {
+        background-color: var(--bg-cards);
     }
 }
