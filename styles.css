@@ -36,6 +36,10 @@ li {
     list-style-type: none;
 }
 
+.hidden {
+    display: none !important;
+}
+
 .typescript {
     background-color: var(--ts-color) !important;
 }
@@ -299,6 +303,17 @@ li {
 .container main .posts .post .content footer .tags {
     display: flex;
     gap: 1.8rem;
+}
+
+.container main .posts .not-found {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+
+    margin-top: 1.4rem;
+
+    font-size: 1.3rem;
 }
 
 /* footer */
