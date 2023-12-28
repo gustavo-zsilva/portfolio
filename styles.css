@@ -262,6 +262,12 @@ li {
 
 /* recent posts */
 
+.container main .posts {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
 .container main .posts .post {
     display: flex;
     gap: 2rem;
