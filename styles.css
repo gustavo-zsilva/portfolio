@@ -64,6 +64,14 @@ li {
     background-color: var(--ts-color) !important;
 }
 
+.profile,
+.links,
+.techs,
+.formation {
+    animation: slideDown .5s;
+    animation-fill-mode: backwards;
+}
+
 .container {
     margin: 2rem;
 
@@ -138,6 +146,8 @@ li {
     flex-direction: column;
 
     gap: 1.2rem;
+
+    animation-delay: .2s;
 }
 
 .container nav .links li {
@@ -156,6 +166,10 @@ li {
 }
 
 /* techs */
+
+.container nav .techs {
+    animation-delay: .4s;
+}
 
 .container nav .techs h1 {
     margin-bottom: 1.6rem;
@@ -185,6 +199,14 @@ li {
 }
 
 /* formation (experiences & education cards) */
+
+.container nav .formation {
+    animation-delay: .6s;
+}
+
+.container nav .formation:last-child {
+    animation-delay: .8s;
+}
 
 .container nav .formation h1 {
     margin-bottom: 1.6rem;
@@ -356,12 +378,23 @@ body > footer {
 @keyframes slideIn {
     from {
         opacity: 0;
-        transform: translateX(-10%);
+        transform: translateX(-6%);
     }
     to {
         opacity: 1;
         transform: translateX(0);
     }
+}
+
+@keyframes slideDown {
+    from {
+        opacity: 0;
+        transform: translateY(-6%);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }   
 }
 
 @keyframes skeletonLoading {
