@@ -267,7 +267,6 @@ li {
 
 .container main .latest-projects .project-overview:last-child {
     animation-delay: .2s;
-    animation-fill-mode: backwards;
 }
 
 .container main .latest-projects .project-overview header {
@@ -327,6 +326,9 @@ li {
 .container main .posts .post {
     display: flex;
     gap: 2rem;
+
+    animation: slideDown .8s;
+    animation-fill-mode: backwards;
 }
 
 .container main .posts .post img {
