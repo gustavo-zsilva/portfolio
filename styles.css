@@ -286,6 +286,9 @@ li {
 .container main .latest-projects .project-overview footer {
     display: flex;
     justify-content: space-between;
+
+    flex: 1;
+    align-items: flex-end;
 }
 
 .container main .latest-projects .project-overview footer p.stats {
@@ -405,5 +408,58 @@ body > footer {
     }
     to {
         background-color: var(--bg-cards);
+    }
+}
+
+@media (max-width: 1170px) {
+    .latest-projects {
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 800px) {
+    .container {
+        flex-direction: column;
+    }
+
+    .container nav {
+        margin: auto;
+    }
+
+    .container nav .profile {
+        text-align: center;
+    }
+
+    .container main {
+        max-width: 350px;
+        margin: auto;
+    }
+
+    .projects,
+    .recent-posts {
+        animation: slideDown .5s;
+        animation-fill-mode: backwards;
+    }
+
+    .projects {
+        animation-delay: 1s;
+    }
+
+    .recent-posts {
+        animation-delay: 1.2s;
+    }
+
+    body > footer {
+        margin: 4rem;
+    }
+}
+
+@media (max-width: 400px) {
+    .container {
+        margin: 2rem .8rem;
+    }
+
+    .container nav {
+        max-width: 100%;
     }
 }
